@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --border-soft: #e8e9ea;
+  --hover-soft: #F3F4F4;
+  --extra-color: #F3CA4D;
+  --content-width: 1050px;
+
+  /* --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif; */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
