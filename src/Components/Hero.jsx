@@ -9,7 +9,7 @@ const Hero = () => {
     return (
         <section className="max-w-(--content-width) mx-auto px-5 lg:px-0">
             <img className='w-(--content-width) h-70 object-cover mx-auto' src={bannerImg} alt="" />
-            <div className='border border-(--border-soft)'>
+            <div className='border-x border-(--border-soft)'>
                 <div className='max-w-2xl mx-auto relative'>
                     <div>
                         <img src={my} alt="" className='absolute -top-20 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 rounded-full border-5 border-white w-38' />
@@ -17,7 +17,7 @@ const Hero = () => {
                     <div className='flex flex-col md:flex-row justify-between items-center'>
                         <div className='space-y-2 pt-24 text-center md:text-left pb-10 md:pb-14'>
                             <h3 className='text-2xl md:text-3xl '>Bibi Mariyam</h3>
-                            <p className='text-[#0810e9]'>Frontend Developer</p>
+                            <p className='text-[#4C58EB] font-medium'>Frontend Developer</p>
                             <div className='flex items-center justify-center md:justify-start'>
                                 <CiLocationOn className='text-xl mr-1' />
                                 Chattogram, Bangladesh
