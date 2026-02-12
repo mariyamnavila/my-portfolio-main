@@ -78,44 +78,48 @@ const Contact = () => {
     }, { scope: container });
 
     return (
-        <section ref={container} className="max-w-(--content-width) mx-auto border-x border-(--border-soft) py-20">
-            <Toaster position="top-right" />
-            <div className="max-w-2xl mx-auto flex flex-col gap-8 px-4 md:px-0">
+        <section ref={container} className="max-w-(--content-width) mx-auto ">
+            <div className="h-4 border-x border-b border-(--border-soft) "></div>
+            <div className="border-x border-(--border-soft) bg-[url('./assets/download.svg')] bg-cover bg-center bg-no-repeat py-20">
+                <Toaster position="top-right" />
+                <div className="max-w-2xl mx-auto flex flex-col gap-8 px-4 md:px-0">
 
-                {/* Heading */}
-                <div className="flex flex-col gap-3 text-center contact-heading">
-                    <p className="text-sm tracking-[2px] uppercase font-medium">Contact</p>
-                    <h2 className="text-xl md:text-3xl lg:text-[32px]">
-                        Let’s build something together
-                    </h2>
-                    <p className="text-(--text-secondary) text-sm md:text-base">
-                        Have a question or want to collaborate? Send me a message and I’ll get back to you as soon as possible.
-                    </p>
-                </div>
-
-                {/* Contact Form */}
-                <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-4 mb-4">
-                        <input type="text" name="user_name" placeholder="Your Name" required className={`${inputClass} contact-input`} />
-                        <input type="email" name="user_email" placeholder="Your Email" required className={`${inputClass} contact-input`} />
-                        <textarea name="message" placeholder="Your Message" rows="5" required className={`${inputClass} contact-input`}></textarea>
+                    {/* Heading */}
+                    <div className="flex flex-col gap-3 text-center contact-heading">
+                        <p className="text-sm tracking-[2px] uppercase font-medium">Contact</p>
+                        <h2 className="text-xl md:text-3xl lg:text-[32px]">
+                            Let’s build something together
+                        </h2>
+                        <p className="text-(--text-secondary) text-sm md:text-base">
+                            Have a question or want to collaborate? Send me a message and I’ll get back to you as soon as possible.
+                        </p>
                     </div>
 
+                    {/* Contact Form */}
+                    <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 mb-4">
+                            <input type="text" name="user_name" placeholder="Your Name" required className={`${inputClass} contact-input`} />
+                            <input type="email" name="user_email" placeholder="Your Email" required className={`${inputClass} contact-input`} />
+                            <textarea name="message" placeholder="Your Message" rows="5" required className={`${inputClass} contact-input`}></textarea>
+                        </div>
 
-                    <button
-                        type="submit"
-                        className="relative px-5 py-3 rounded-full text-white font-medium bg-linear-to-r from-[#a58fdf] to-(--extra-color) group contact-button"
-                        disabled={loading}
-                    >
-                        <span className="absolute inset-0 rounded-full bg-black/90 group-hover:bg-transparent transition duration-300 flex items-center justify-center m-0.5">
-                            <CgMail className='mr-2 text-xl' /> {loading ? "Sending..." : "Send Message"}
-                        </span>
-                        <span className="relative flex items-center justify-center">
-                            <CgMail className='mr-2 text-xl' /> {loading ? "Sending..." : "Send Message"}
-                        </span>
-                    </button>
-                </form>
+
+                        <button
+                            type="submit"
+                            className="relative px-5 py-3 rounded-full text-white font-medium bg-[#a58fdf] group contact-button"
+                            disabled={loading}
+                        >
+                            <span className="absolute inset-0 rounded-full bg-black/90 group-hover:bg-transparent transition duration-300 flex items-center justify-center m-0.5">
+                                <CgMail className='mr-2 text-xl' /> {loading ? "Sending..." : "Send Message"}
+                            </span>
+                            <span className="relative flex items-center justify-center">
+                                <CgMail className='mr-2 text-xl' /> {loading ? "Sending..." : "Send Message"}
+                            </span>
+                        </button>
+                    </form>
+                </div>
             </div>
+            <div className="h-4 border-x border-t border-(--border-soft)"></div>
         </section>
     );
 };

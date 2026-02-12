@@ -61,6 +61,12 @@ const Extra = () => {
                                 <GoArrowUpRight className='text-[28px] group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in' />
                             </div>
                         </a>
+                        <a className='repo-item group' href="https://github.com/mariyamnavila/jobtrack">
+                            <div className='group flex flex-wrap items-center gap-2'>
+                                <p className='text-xl font-medium'>JobTrack</p>
+                                <GoArrowUpRight className='text-[28px] group-hover:translate-x-1.5 group-hover:rotate-45 transition-all duration-300 ease-in' />
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

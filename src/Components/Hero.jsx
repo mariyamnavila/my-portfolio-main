@@ -47,7 +47,7 @@ const Hero = () => {
 
     return (
         <section className="max-w-(--content-width) mx-auto px-5 lg:px-0">
-            <img  ref={bannerRef} className='w-(--content-width) h-70 object-cover mx-auto' src={bannerImg} alt="" />
+            <img ref={bannerRef} className='w-(--content-width) h-70 object-cover mx-auto' src={bannerImg} alt="" />
             <div className='border-x border-(--border-soft)'>
                 <div className='max-w-2xl mx-auto relative'>
                     <div>
@@ -81,12 +81,14 @@ const Hero = () => {
                                 </div>
                             </div>
                             <div className=' ml-2'>
-                                <div className="relative px-5 py-3 rounded-full text-white font-medium bg-linear-to-r from-[#a58fdf] to-(--extra-color) group" >
-                                    <span className="absolute inset-0 rounded-full bg-black/90 group-hover:bg-transparent transition duration-300 flex items-center justify-center m-0.5">
-                                        <AiFillThunderbolt className='mr-2' />  Get in touch
-                                    </span>
-                                    <span className="relative flex items-center justify-center"><AiFillThunderbolt className='mr-2' /> Get in touch</span>
-                                </div>
+                                <a href="mailto:bibimariyamnavila@gmail.com">
+                                    <div className="relative px-5 py-3 rounded-full text-white font-medium bg-[#a58fdf] group" >
+                                        <span className="absolute inset-0 rounded-full bg-black/90 group-hover:bg-transparent transition duration-300 flex items-center justify-center m-0.5">
+                                            <AiFillThunderbolt className='mr-2' />  Get in touch
+                                        </span>
+                                        <span className="relative flex items-center justify-center"><AiFillThunderbolt className='mr-2' /> Get in touch</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

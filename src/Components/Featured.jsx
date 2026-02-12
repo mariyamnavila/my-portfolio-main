@@ -27,6 +27,13 @@ const projects = [
             "Royal Ville is a hotel room booking web application where users can browse, book, and review hotel rooms.",
         link: "https://royal-ville.web.app/",
     },
+    {
+        name: "JobTrack",
+        image: "/projects/Jobtrack.png",
+        description:
+            "JobTrack is a frontend web app to apply for jobs and manage applications.",
+        link: "https://jobtrack-b425e.web.app/",
+    },
 ]
 
 
@@ -77,7 +84,7 @@ const Featured = () => {
                             Featured work
                         </p>
                         <button className="rounded-md text-sm font-medium transition-all border border-(--border-soft) shadow-xs hover:bg-(--hover-soft) py-3 px-5">
-                            Download Portfolio
+                            Download Resume
                         </button>
                     </div>
                 </div>
@@ -89,7 +96,7 @@ const Featured = () => {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`project-card block border-b border-(--border-soft) 
+                            className={`project-card block border-b border-(--border-soft) hover:bg-(--hover-soft) transition-all duration-300
                                 ${index % 2 === 0 ? "md:border-r" : ""}`}
                         >
                             <div className="flex flex-col gap-3.5 md:gap-5 p-3.5 md:p-6 h-full">
@@ -97,7 +104,7 @@ const Featured = () => {
                                     <img
                                         src={project.image}
                                         alt={project.name}
-                                        className="project-image w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="project-image w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                         <span className="text-white font-semibold text-lg border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm">

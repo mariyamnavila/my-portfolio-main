@@ -62,7 +62,7 @@ const About = () => {
                         <p className="text-sm uppercase font-medium">Services</p>
                         <div className="flex flex-wrap gap-2 sm:gap-3">
                             {
-                                services.map(ser => <span className="service-item inline-flex items-center justify-center border border-(--border-soft) text-xs font-medium w-fit whitespace-nowrap shrink-0 py-1.5 px-3 rounded-lg">{ser}</span>)
+                                services.map(ser => <span className="service-item inline-flex items-center justify-center border border-(--border-soft) text-xs font-medium whitespace-nowrap shrink-0 py-1.5 px-3 rounded-lg hover:shadow-lg transition-shadow duration-200">{ser}</span>)
                             }
 
                         </div>
