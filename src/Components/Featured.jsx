@@ -1,3 +1,9 @@
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
@@ -25,87 +31,89 @@ const projects = [
 
 
 const Featured = () => {
+    const container = useRef(null);
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: container.current,
+                start: "top 75%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        tl.from(".featured-heading", {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        })
+            .from(".project-card", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out"
+            }, "-=0.6")
+            .from(".project-image", {
+                scale: 1.1,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power2.out"
+            }, "-=0.9");
+
+    }, { scope: container });
+
+
     return (
-        <section className="max-w-(--content-width) mx-auto">
+        <section ref={container} className="max-w-(--content-width) mx-auto">
             <div className="h-4 border border-(--border-soft)"></div>
 
-            <div className="border-x border-(--border-soft) ">
+            <div className="border-x border-(--border-soft)">
                 <div className="max-w-2xl flex flex-col gap-12 mx-auto px-4 md:px-0 py-10">
-
-                    {/* Heading */}
-                    <div className=" flex flex-col md:flex-row gap-5 items-center justify-between">
-                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
+                    <div className="featured-heading flex flex-col md:flex-row gap-5 items-center justify-between">
+                        <p className="text-sm tracking-[2px] uppercase font-medium">
                             Featured work
                         </p>
-                        <button class=" rounded-md text-sm font-medium transition-all border border-(--border-soft) shadow-xs hover:bg-(--hover-soft) py-3 px-5" >Download Portfolio</button>
+                        <button className="rounded-md text-sm font-medium transition-all border border-(--border-soft) shadow-xs hover:bg-(--hover-soft) py-3 px-5">
+                            Download Portfolio
+                        </button>
                     </div>
-
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 border-t border-(--border-soft)">
-                    <a
-                        href={projects[0].link} target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div className=" flex flex-col gap-3.5 md:gap-5 p-3.5 md:p-6 border-b border-(--border-soft)">
-                            <div className="overflow-hidden relative">
-                                <img
-                                    src={projects[0].image}
-                                    alt={projects[0].name}
-                                    className="project-image w-full h-56 object-cover"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span className="text-white font-semibold text-lg">View Live</span>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-1 md:gap-2 px-2">
-                                <h4 className="text-2xl font-medium">{projects[0].name}</h4>
-                                <p className="text-(--text-secondary)">{projects[0].description}</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href={projects[1].link} target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div className=" flex flex-col gap-3.5 md:gap-5 p-3.5 md:p-6 border-l border-b border-(--border-soft)">
-                            <div className="overflow-hidden relative">
-                                <img
-                                    src={projects[1].image}
-                                    alt={projects[1].name}
-                                    className="project-image w-full h-56 object-cover"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span className="text-white font-semibold text-lg">View Live</span>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-1 md:gap-2 px-2">
-                                <h4 className="text-2xl font-medium">{projects[1].name}</h4>
-                                <p className="text-(--text-secondary)">{projects[1].description}</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href={projects[2].link} target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div className=" flex flex-col gap-3.5 md:gap-5 p-3.5 md:p-6 border-r border-(--border-soft)">
-                            <div className="overflow-hidden relative">
-                                <img
-                                    src={projects[2].image}
-                                    alt={projects[2].name}
-                                    className="project-image w-full h-56 object-cover"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span className="text-white font-semibold text-lg">View Live</span>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-1 md:gap-2 px-2 pb-3">
-                                <h4 className="text-2xl font-medium">{projects[2].name}</h4>
-                                <p className="text-(--text-secondary)">{projects[2].description}</p>
-                            </div>
-                        </div>
-                    </a>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 border-t border-(--border-soft)">
+                    {projects.map((project, index) => (
+                        <a
+                            key={index}
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`project-card block border-b border-(--border-soft) 
+                                ${index % 2 === 0 ? "md:border-r" : ""}`}
+                        >
+                            <div className="flex flex-col gap-3.5 md:gap-5 p-3.5 md:p-6 h-full">
+                                <div className="overflow-hidden relative group">
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                        className="project-image w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <span className="text-white font-semibold text-lg border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm">
+                                            View Live
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col gap-1 md:gap-2 px-2 pb-3">
+                                    <h4 className="text-2xl font-medium">{project.name}</h4>
+                                    <p className="text-(--text-secondary) line-clamp-2">
+                                        {project.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
                 </div>
             </div>
         </section>

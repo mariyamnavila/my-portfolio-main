@@ -52,7 +52,7 @@ const Skills = () => {
 
                     {/* Heading */}
                     <div className="skills-heading flex flex-col gap-4">
-                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
+                        <p className="text-sm tracking-[2px] uppercase font-medium">
                             Skills
                         </p>
                         <h2 className="text-xl md:text-3xl lg:text-[32px]">

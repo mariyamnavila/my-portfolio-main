@@ -54,7 +54,7 @@ const About = () => {
             <div className="bg-[url('./assets/download.svg')] bg-cover bg-center bg-no-repeat border-x border-(--border-soft) py-17">
                 <div className="max-w-2xl flex flex-col gap-9 sm:gap-12 mx-auto px-4 md:px-0">
                     <div className="flex flex-col gap-4 about-text">
-                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">About Me</p>
+                        <p className="text-sm tracking-[2px] uppercase font-medium">About Me</p>
                         <h2 className="text-xl md:text-3xl lg:text-[32px]">Hey there. I’m Mariyam — a web developer creating responsive, user-friendly web apps with React and Node.js, focused on clean code and smooth user experiences.</h2>
                         <h5 className="text-(--text-secondary)">Built projects including RecipeBook, Royal Ville, and LifeDrop.</h5>
                     </div>
