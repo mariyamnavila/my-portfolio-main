@@ -64,7 +64,7 @@ const Experience = () => {
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-b border-(--border-soft)">
-                <div className="max-w-2xl flex flex-col mx-auto px-4 md:px-0 py-10">
+                <div className="max-w-2xl mx-auto px-4 md:px-0 py-10">
                     <p className="exp-heading text-sm tracking-[2px] uppercase font-medium">
                         Experience
                     </p>
