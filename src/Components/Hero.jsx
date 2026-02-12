@@ -56,7 +56,7 @@ const Hero = () => {
                     <div ref={textRef} className='flex flex-col md:flex-row justify-between items-center'>
                         <div className='space-y-2 pt-24 text-center md:text-left pb-10 md:pb-14'>
                             <h3 className='text-2xl md:text-3xl '>Bibi Mariyam</h3>
-                            <p className='text-[#a58fdf] font-medium'>Frontend Developer</p>
+                            <p className='text-[#a58fdf] font-medium'>Full-stack Developer</p>
                             <div className='flex items-center justify-center md:justify-start'>
                                 <CiLocationOn className='text-xl mr-1' />
                                 Chattogram, Bangladesh

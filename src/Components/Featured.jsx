@@ -55,13 +55,13 @@ const Featured = () => {
             duration: 1,
             ease: "power3.out"
         })
-            .from(".project-card", {
-                y: 80,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out"
-            }, "-=0.6")
+            // .from(".project-card", {
+            //     y: 80,
+            //     opacity: 0,
+            //     duration: 1,
+            //     stagger: 0.2,
+            //     ease: "power3.out"
+            // }, "-=0.6")
             .from(".project-image", {
                 scale: 1.1,
                 opacity: 0,
