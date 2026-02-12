@@ -56,7 +56,7 @@ const Hero = () => {
                     <div ref={textRef} className='flex flex-col md:flex-row justify-between items-center'>
                         <div className='space-y-2 pt-24 text-center md:text-left pb-10 md:pb-14'>
                             <h3 className='text-2xl md:text-3xl '>Bibi Mariyam</h3>
-                            <p className='text-[#4C58EB] font-medium'>Frontend Developer</p>
+                            <p className='text-[#a58fdf] font-medium'>Frontend Developer</p>
                             <div className='flex items-center justify-center md:justify-start'>
                                 <CiLocationOn className='text-xl mr-1' />
                                 Chattogram, Bangladesh
@@ -81,7 +81,7 @@ const Hero = () => {
                                 </div>
                             </div>
                             <div className=' ml-2'>
-                                <div className="relative px-5 py-3 rounded-full text-white font-medium bg-linear-to-r from-[#464cf1] to-(--extra-color) group" >
+                                <div className="relative px-5 py-3 rounded-full text-white font-medium bg-linear-to-r from-[#a58fdf] to-(--extra-color) group" >
                                     <span className="absolute inset-0 rounded-full bg-black/90 group-hover:bg-transparent transition duration-300 flex items-center justify-center m-0.5">
                                         <AiFillThunderbolt className='mr-2' />  Get in touch
                                     </span>

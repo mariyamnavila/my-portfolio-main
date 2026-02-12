@@ -1,4 +1,5 @@
 import About from "./Components/About";
+import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import Extra from "./Components/Extra";
 import Featured from "./Components/Featured";
@@ -14,6 +15,7 @@ const App = () => {
       <Featured></Featured>
       <Experience></Experience>
       <Extra></Extra>
+      <Contact></Contact>
     </div>
   );
 };
