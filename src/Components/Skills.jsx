@@ -73,6 +73,7 @@ const Skills = () => {
                                     <span className={skillPill}>Next.js</span>
                                     <span className={skillPill}>Tailwind CSS</span>
                                     <span className={skillPill}>HTML</span>
+                                    <span className={skillPill}>Javascript</span>
                                     <span className={skillPill}>CSS</span>
                                 </div>
                             </div>
