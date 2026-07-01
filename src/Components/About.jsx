@@ -23,8 +23,8 @@ const About = () => {
 
     useGSAP(() => {
         const tl = gsap.timeline({
-            scrollTrigger:{
-                trigger:container.current,
+            scrollTrigger: {
+                trigger: container.current,
                 start: 'top 85%',
                 toggleActions: 'play none none none'
             }

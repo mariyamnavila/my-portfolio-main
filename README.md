@@ -1,16 +1,68 @@
-# React + Vite
+Personal Portfolio 
+Task Requirements:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Navigation Bar (Navbar)
+-A fully responsive navigation bar.
+-Easy access to all sections of the portfolio from the navbar.
 
-Currently, two official plugins are available:
+2. Designation and Introduction
+-Display your professional designation (e.g., Frontend Developer, Web Developer, Full Stack Developer, etc.).
+-Include a professional photo of yourself.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Resume Download Button
+-A clearly visible button in the hero section that allows visitors to view and download your resume with a single click. (**Resume will be downloaded if your resume is ready. If it is not ready, for now you can just keep the clickable button.**)
 
-## React Compiler
+4. Social Links
+-Embed buttons linking to your relevant social media profiles (e.g., GitHub, LinkedIn, Twitter, Facebook).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+5. About Me Section
+-Write a detailed introduction about yourself, including:
+-Your programming journey.
+-The type of work you enjoy.
+-Any hobbies or interests outside of programming (e.g., sports, painting).
+-Showcase your personality in this section.
 
-## Expanding the ESLint configuration
+6. Skills Section
+-Display your skills in a visually appealing graphical format.
+-Categorize skills if necessary (e.g., Frontend, Backend, Tools).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+7. Educational Qualification
+-Mention your educational background in detail if you have completed education above HSC.
+
+8. Experience (If Applicable)
+-Add relevant professional experience, if available.
+
+9. Projects Section (At Least 3 Projects)
+-Showcase at least three of your best projects in card format.
+-Each project card must contain:
+-Project name
+-Project image
+-"View More / Details" button
+-Clicking the "View More / Details" button should lead to a detailed project page containing:
+-Main technology stack used
+-Brief description
+-Live project link
+-GitHub repository link (only client)
+-Challenges faced while developing the project
+-Potential improvements and future plans for the project
+
+10. Contact Information
+-Provide an easy way for visitors to contact you directly.
+-Include:
+-Email address
+-Phone number
+-WhatsApp number (optional)
+
+11. Footer (Optional)
+-A simple and elegant footer can be added for better presentation.
+
+12. Responsive and Clean UI for All Devices
+-Ensure full responsiveness across all screen sizes (desktop, laptop, tablet, mobile).
+-Choose a polished and professional color scheme.
+
+**You can use any technology to build the proper portfolio.But all the requirements must be completed.** 
+
+Submission Requirements:
+-The website must be hosted and a live link should be provided. Please ensure that the live link is working. Otherwise, you will be given 0.
+-Ensure a clean and structured design following the above-mentioned points.
