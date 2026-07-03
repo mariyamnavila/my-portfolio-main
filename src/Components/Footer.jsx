@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className='border-y border-(--border-soft)'>
             <div className='max-w-(--content-width) mx-auto border-x border-(--border-soft) '>
-                <div className='max-w-3xl mx-auto px-4 py-8 font-medium text-center'>
+                <div className='max-w-4xl mx-auto px-4 py-8 font-medium text-center'>
                     2026 © Made by Bibi Mariyam — All rights reserved
                 </div>
             </div>

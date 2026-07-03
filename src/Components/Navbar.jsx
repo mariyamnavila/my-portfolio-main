@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { FiArrowRight, FiMenu, FiX } from "react-icons/fi";
-import monogram from "../assets/monogram.png";
+import monogram from "../assets/my.jpg";
 
 const navLinks = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
+    { label: "Experience", href: "#experience" },
     { label: "Contact", href: "#contact" },
 ];
 
@@ -86,7 +87,7 @@ const Navbar = () => {
                     className="flex items-center gap-3 rounded-full pr-2 transition-transform duration-300 hover:scale-[1.01]"
                 >
                     <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-slate-200/80 bg-[#fdf8ee] shadow-sm">
-                        <img src={monogram} alt="Mariyam monogram" className="h-full w-full object-cover" />
+                        <img src={monogram} alt="Mariyam profile" className="h-full w-full object-cover" />
                     </div>
                     <div className="hidden sm:block">
                         <p className="text-sm font-semibold tracking-[0.2em] text-slate-900 uppercase">Mariyam</p>

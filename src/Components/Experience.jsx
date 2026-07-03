@@ -1,7 +1,10 @@
 import { useRef } from "react";
-import { PiCodeBold } from "react-icons/pi";
+import { PiBriefcaseBold, PiGraduationCapBold } from "react-icons/pi";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const experienceData = [
     {
@@ -9,11 +12,33 @@ const experienceData = [
         company: "Independent Projects",
         duration: "2025 – Present",
         points: [
-            "Developed and deployed 3 full stack web applications",
-            "Built REST APIs using Node.js and Express",
-            "Designed responsive UI with Tailwind CSS",
-            "Integrated MongoDB for dynamic data management",
-            "Focused on clean code and scalable structure"
+            "Developed and deployed full-stack MERN (MongoDB, Express, React, Node) applications",
+            "Designed and documented RESTful APIs, securing them with JWT",
+            "Designed highly responsive user interfaces utilizing Tailwind CSS",
+            "Implemented firebase authentication and role-based access control",
+            "Optimized query performance and database indexing with MongoDB"
+        ]
+    }
+];
+
+const educationData = [
+    {
+        degree: "B.Sc. in Computer Science & Engineering",
+        institution: "Your University / Institution",
+        duration: "2022 – Present",
+        points: [
+            "Focusing on Software Engineering, Web Systems, and Algorithms.",
+            "Building practical projects utilizing modern web frameworks.",
+            "Maintaining strong academic standing and participating in programming workshops."
+        ]
+    },
+    {
+        degree: "Higher Secondary Certificate (HSC)",
+        institution: "Your College / Institution",
+        duration: "Completed",
+        points: [
+            "Science Group.",
+            "Acquired strong analytical and mathematical foundation."
         ]
     }
 ];
@@ -22,6 +47,7 @@ const Experience = () => {
     const container = useRef(null);
 
     useGSAP(() => {
+        ScrollTrigger.refresh();
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container.current,
@@ -36,65 +62,100 @@ const Experience = () => {
             duration: 1,
             ease: "power3.out"
         })
-            .from(".exp-card", {
+            .from(".timeline-column", {
                 y: 50,
                 opacity: 0,
                 duration: 1,
+                stagger: 0.2,
                 ease: "power3.out"
             }, "-=0.6")
-            .from(".exp-icon", {
-                scale: 0.5,
+            .from(".timeline-item", {
                 opacity: 0,
-                duration: 0.6,
-                ease: "back.out(1.7)"
-            }, "-=0.7")
-            .from(".exp-point", {
-                x: -20,
-                opacity: 0,
+                x: (i) => i % 2 === 0 ? -20 : 20,
                 stagger: 0.15,
-                duration: 0.6,
+                duration: 0.8,
                 ease: "power2.out"
-            }, "-=0.6");
+            }, "-=0.5");
 
     }, { scope: container });
 
-
     return (
-        <section ref={container} className="max-w-(--content-width) mx-auto">
+        <section id="experience" ref={container} className="max-w-(--content-width) mx-auto">
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-b border-(--border-soft)">
-                <div className="max-w-3xl mx-auto px-4 md:px-0 py-10">
-                    <p className="exp-heading text-sm tracking-[2px] uppercase font-medium">
-                        Experience
+                <div className="max-w-4xl mx-auto px-4 md:px-0 py-10">
+                    <p className="exp-heading text-sm tracking-[2px] uppercase font-semibold text-[#a58fdf] text-center md:text-left">
+                        Experience & Education
                     </p>
                 </div>
             </div>
 
-            <div className="border-x border-(--border-soft)">
-                <div className="max-w-3xl mx-auto px-4 md:px-0 md:py-10">
-                    {experienceData.map((exp, index) => (
-                        <div
-                            key={index}
-                            className="exp-card flex flex-col gap-5 pt-8 md:pt-10 pb-8 md:pb-10 border-b border-dashed border-(--border-soft) last:border-b-0">
-                            <PiCodeBold className="exp-icon text-3xl " />
-                            <div className="flex flex-wrap gap-5 justify-between items-center">
-                                <p className="text-lg font-medium">{exp.title}, {exp.company}</p>
-                                <div className="flex items-center border border-(--border-soft) gap-2.5 py-1.5 px-3 rounded-lg text-sm">
-                                    <div className="w-4 h-2 bg-black rounded-full animate-pulse" />
-                                    <div>{exp.duration}</div>
-                                </div>
-                            </div>
-                            <ul className="space-y-3">
-                                {exp.points.map((point, i) => (
-                                    <li key={i} className="exp-point flex items-start gap-2 text-(--text-secondary)">
-                                        <span className="w-2.5 h-2.5">•</span>
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
+            <div className="border-x border-(--border-soft) py-12">
+                <div className="max-w-4xl mx-auto px-4 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+                    {/* Left Column: Experience */}
+                    <div className="timeline-column flex flex-col gap-6">
+                        <div className="flex items-center gap-2 border-b border-(--border-soft) pb-3">
+                            <PiBriefcaseBold className="text-xl text-[#a58fdf]" />
+                            <h3 className="text-base font-bold text-slate-900">Professional Experience</h3>
                         </div>
-                    ))}
+
+                        <div className="relative border-l-2 border-dashed border-slate-200 pl-5 ml-2.5 space-y-8">
+                            {experienceData.map((exp, index) => (
+                                <div key={index} className="timeline-item relative group">
+                                    {/* Timeline dot */}
+                                    <div className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-slate-900 border-2 border-white group-hover:bg-[#a58fdf] transition-colors duration-300" />
+
+                                    <div className="flex flex-col gap-2">
+                                        <span className="text-[10px] font-bold text-[#a58fdf] uppercase tracking-wider">{exp.duration}</span>
+                                        <h4 className="text-sm font-bold text-slate-800">{exp.title}</h4>
+                                        <p className="text-xs font-semibold text-slate-500">{exp.company}</p>
+                                        <ul className="mt-2 space-y-2">
+                                            {exp.points.map((point, i) => (
+                                                <li key={i} className="text-xs text-(--text-secondary) leading-relaxed flex items-start gap-1.5">
+                                                    <span className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0" />
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Column: Education */}
+                    <div className="timeline-column flex flex-col gap-6">
+                        <div className="flex items-center gap-2 border-b border-(--border-soft) pb-3">
+                            <PiGraduationCapBold className="text-xl text-[#a58fdf]" />
+                            <h3 className="text-base font-bold text-slate-900">Education Background</h3>
+                        </div>
+
+                        <div className="relative border-l-2 border-dashed border-slate-200 pl-5 ml-2.5 space-y-8">
+                            {educationData.map((edu, index) => (
+                                <div key={index} className="timeline-item relative group">
+                                    {/* Timeline dot */}
+                                    <div className="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-slate-900 border-2 border-white group-hover:bg-[#a58fdf] transition-colors duration-300" />
+
+                                    <div className="flex flex-col gap-2">
+                                        <span className="text-[10px] font-bold text-[#a58fdf] uppercase tracking-wider">{edu.duration}</span>
+                                        <h4 className="text-sm font-bold text-slate-800">{edu.degree}</h4>
+                                        <p className="text-xs font-semibold text-slate-500">{edu.institution}</p>
+                                        <ul className="mt-2 space-y-2">
+                                            {edu.points.map((point, i) => (
+                                                <li key={i} className="text-xs text-(--text-secondary) leading-relaxed flex items-start gap-1.5">
+                                                    <span className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0" />
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

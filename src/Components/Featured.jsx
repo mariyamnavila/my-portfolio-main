@@ -12,87 +12,128 @@ const projects = [
         name: "Life Drop",
         image: "/projects/Life-drop.png",
         description:
-            "Life Drop is a blood donation web application that connects blood donors with people in urgent need of blood.",
+            "Life Drop is a full-stack blood donation web application that connects blood donors with individuals in urgent need. It features role-based dashboards, blood request management, and secure online donations through Stripe.",
         link: "https://life-drop-17699.web.app/",
         github: "https://github.com/mariyamnavila/life-drop",
-        techStack: ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "Tailwind CSS"],
+        techStack: [
+            "React",
+            "Tailwind CSS",
+            "Firebase",
+            "Stripe",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Shadcn UI",
+            "Tanstack Query",
+            "Axios",
+            "Zod"
+        ],
         features: [
-            "Donor registration and profile management",
-            "Blood request creation with location and blood type",
-            "Search and filter donors by blood group and area",
-            "Email notifications for matching requests",
+            // "Role-based dashboards for Admin, Volunteer, and User",
+            "Create, update, and manage blood donation requests",
+            "Search blood requests and update donation status",
+            "Secure authentication and Stripe-powered donation system",
         ],
         improvements: [
-            "Add real-time blood availability tracking",
-            "Implement push notifications for urgent requests",
-            "Add multi-language support for broader accessibility",
-            "Integrate maps for nearby donation centers",
+            "Add real-time notifications for new blood requests",
+            "Integrate nearby donation center maps",
+            "Implement multilingual support",
+            "Provide blood donation history and analytics",
         ],
     },
+
     {
         name: "Recipe Book",
         image: "/projects/Recipe-book.png",
         description:
-            "Recipe Book is a responsive web application that allows users to manage their personal recipes, discover new ones, and interact with recipes shared by others.",
+            "Recipe Book is a responsive web application where users can create, manage, and explore recipes. It includes personal recipe collections, wishlists, and an interactive like/dislike system.",
         link: "https://recipe-book-77bc3.web.app/",
         github: "https://github.com/mariyamnavila/recipe-book-client",
-        techStack: ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "Tailwind CSS"],
+        techStack: [
+            "React",
+            "Tailwind CSS",
+            "DaisyUI",
+            "Firebase",
+            "React Router",
+            "DotLottie",
+        ],
         features: [
-            "User authentication and personal recipe collection",
-            "Add, edit, and delete recipes with images",
-            "Like and comment on recipes from other users",
-            "Category-based recipe filtering",
+            "Create, edit, and delete personal recipes",
+            "Upload recipe images with detailed cooking instructions",
+            "Save favorite recipes to a wishlist",
+            "Like and dislike recipes shared by other users",
         ],
         improvements: [
-            "Add recipe filtering by dietary preferences",
-            "Implement a shopping list generator from recipes",
-            "Add social features like following other cooks",
-            "Support recipe video uploads",
+            "Add recipe search with advanced filters",
+            "Support recipe categories and meal planning",
+            "Implement recipe sharing via social media",
+            "Allow video tutorials for recipes",
         ],
     },
+
     {
         name: "Royal Ville",
         image: "/projects/Royal-ville.png",
         description:
-            "Royal Ville is a hotel room booking web application where users can browse, book, and review hotel rooms.",
+            "Royal Ville is a full-stack hotel room booking web application that allows users to browse rooms, filter and sort listings, manage bookings, and submit reviews after their stay.",
         link: "https://royal-ville.web.app/",
         github: "https://github.com/mariyamnavila/royal-ville-client",
-        techStack: ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "Tailwind CSS"],
+        techStack: [
+            "React",
+            "Tailwind CSS",
+            "Firebase",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Framer Motion",
+            "React Router",
+            "Swiper"
+        ],
         features: [
-            "Browse available rooms with filters and pricing",
-            "Room booking with date selection and confirmation",
-            "User reviews and ratings for booked rooms",
-            "Admin panel for managing rooms and bookings",
+            "Browse rooms with filtering and sorting options",
+            "Book rooms for selected dates",
+            "Update booking dates or cancel reservations",
+            "Leave ratings and reviews after completed stays",
         ],
         improvements: [
-            "Add payment integration for online booking",
-            "Implement room availability calendar",
-            "Add admin dashboard for hotel management",
-            "Integrate a review moderation system",
+            "Integrate online payment gateway",
+            "Add booking confirmation emails",
+            "Implement hotel management analytics dashboard",
+            "Support room image galleries and virtual tours",
         ],
     },
+
     {
         name: "JobTrack",
         image: "/projects/Jobtrack.png",
         description:
-            "JobTrack is a frontend web app to apply for jobs and manage applications.",
+            "JobTrack is a frontend job application management web app that enables users to browse job opportunities, apply for positions, and organize their applications through a modern, responsive interface with smooth animations and real-time notifications.",
         link: "https://jobtrack-b425e.web.app/",
         github: "https://github.com/mariyamnavila/jobtrack",
-        techStack: ["React", "Tailwind CSS", "Firebase Auth"],
+        techStack: [
+            "React",
+            "Tailwind CSS",
+            "DaisyUI",
+            "GSAP",
+            "React Router",
+            "React Toastify",
+            "Firebase",
+            // "Vite",
+        ],
         features: [
-            "Browse job listings with company details",
-            "Apply to jobs with a single click",
-            "Track application status in a dashboard",
-            "Filter jobs by category and location",
+            "Browse and apply for available job listings",
+            "Delete submitted job applications",
+            "Smooth UI animations powered by GSAP",
+            // "Real-time toast notifications for user actions",
         ],
         improvements: [
             "Add backend for persistent application storage",
-            "Implement job search filters and sorting",
-            "Add email notifications for application status",
-            "Support resume upload and parsing",
+            "Implement user authentication with application history",
+            "Support resume upload and profile management",
+            "Add recruiter dashboard and application tracking",
         ],
     },
-]
+];
 
 
 const Featured = () => {
@@ -100,6 +141,7 @@ const Featured = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     useGSAP(() => {
+        ScrollTrigger.refresh();
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container.current,
@@ -137,7 +179,7 @@ const Featured = () => {
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-(--border-soft)">
-                <div className="max-w-3xl flex flex-col gap-12 mx-auto px-4 md:px-0 py-10">
+                <div className="max-w-4xl flex flex-col gap-12 mx-auto px-4 md:px-0 py-10">
                     <div className="featured-heading flex flex-col md:flex-row gap-5 items-center justify-between">
                         <p className="text-sm tracking-[2px] uppercase font-medium">
                             Featured work

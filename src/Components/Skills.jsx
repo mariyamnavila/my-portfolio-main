@@ -95,15 +95,14 @@ const Skills = () => {
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-(--border-soft) py-17">
-                <div className="max-w-3xl flex flex-col gap-12 mx-auto px-4 md:px-0">
+                <div className="max-w-4xl flex flex-col gap-12 mx-auto px-4 md:px-0">
 
                     {/* Heading */}
                     <div
-                        className={`flex flex-col gap-4 transition-all duration-700 ease-out ${
-                            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                        }`}
+                        className={`flex flex-col gap-4 transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                            }`}
                     >
-                        <p className="text-sm tracking-[2px] uppercase font-medium">
+                        <p className="text-sm tracking-[2px] uppercase font-semibold text-[#a58fdf]">
                             Skills
                         </p>
                         <h2 className="text-xl md:text-3xl lg:text-[32px]">
@@ -120,9 +119,8 @@ const Skills = () => {
                                 <div
                                     key={group.title}
                                     style={{ transitionDelay: visible ? `${groupIndex * 100}ms` : "0ms" }}
-                                    className={`rounded-[1.75rem] border border-(--border-soft) bg-white/80 p-5 shadow-[0_16px_45px_rgba(15,23,42,0.05)] transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(15,23,42,0.08)] ${
-                                        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                                    }`}
+                                    className={`rounded-[1.75rem] border border-(--border-soft) bg-white/80 p-5 shadow-[0_16px_45px_rgba(15,23,42,0.05)] transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(15,23,42,0.08)] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                                        }`}
                                 >
                                     <div className="mb-4 flex items-start justify-between rounded-[1.25rem] p-1">
                                         <div className="flex items-center gap-3">
@@ -145,9 +143,8 @@ const Skills = () => {
                                                             ? `${groupIndex * 100 + skillIndex * 40}ms`
                                                             : "0ms",
                                                     }}
-                                                    className={`flex flex-col items-center gap-1.5 rounded-2xl border border-slate-100 bg-[#fcfaf7] p-3 text-center transition-all duration-500 ease-out ${
-                                                        visible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                                                    }`}
+                                                    className={`flex flex-col items-center gap-1.5 rounded-2xl border border-slate-100 bg-[#fcfaf7] p-3 text-center transition-all duration-500 ease-out ${visible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                                                        }`}
                                                 >
                                                     {SkillIcon && <SkillIcon className="text-2xl" color={skill.color} />}
                                                     <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-700">

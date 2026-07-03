@@ -226,7 +226,7 @@ const ProjectModal = ({ project, onClose }) => {
                     </div>
 
                     {/* Upcoming Updates */}
-                    {/* {project.improvements && project.improvements.length > 0 && (
+                    {project.improvements && project.improvements.length > 0 && (
                         <div ref={improvementsRef} className="space-y-2.5">
                             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
                                 Roadmap & Adjustments
@@ -245,7 +245,7 @@ const ProjectModal = ({ project, onClose }) => {
                                 ))}
                             </ul>
                         </div>
-                    )} */}
+                    )}
 
                     {/* Lower Operational Controls */}
                     <div ref={buttonsRef} className="flex flex-wrap gap-2 md:gap-3 pt-2">
@@ -261,7 +261,7 @@ const ProjectModal = ({ project, onClose }) => {
                         )}
                         {project.link && (
                             <a
-                                href={project.live}
+                                href={project.link}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs md:text-sm font-semibold text-white bg-[#a58fdf] rounded-xl hover:bg-[#927bc7] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#a58fdf]/10"
