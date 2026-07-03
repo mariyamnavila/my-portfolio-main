@@ -23,12 +23,6 @@ const Hero = () => {
             duration: 1,
             ease: "power2.out"
         })
-            .from(profileRef.current, {
-                y: -80,
-                opacity: 0,
-                duration: 1,
-                ease: "back.out(1.7)"
-            }, "-=0.6")
             .from(textRef.current, {
                 y: 40,
                 opacity: 0,
@@ -49,9 +43,9 @@ const Hero = () => {
         <section className="max-w-(--content-width) mx-auto px-5 lg:px-0">
             <img ref={bannerRef} className='w-(--content-width) h-70 object-cover mx-auto' src={bannerImg} alt="" />
             <div className='border-x border-(--border-soft)'>
-                <div className='max-w-2xl mx-auto relative'>
+                <div className='max-w-3xl mx-auto relative'>
                     <div>
-                        <img ref={profileRef} src={my} alt="" className='absolute -top-20 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 rounded-full border-5 border-white w-38' />
+                        <img ref={profileRef} src={my} alt="" className='absolute -top-20 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 rounded-full border-5 border-white w-38 animate-[profile-drop_1s_ease-out_0.5s_both]' />
                     </div>
                     <div ref={textRef} className='flex flex-col md:flex-row justify-between items-center'>
                         <div className='space-y-2 pt-24 text-center md:text-left pb-10 md:pb-14'>
@@ -81,12 +75,12 @@ const Hero = () => {
                                 </div>
                             </div>
                             <div className=' ml-2'>
-                                <a href="mailto:bibimariyamnavila@gmail.com">
+                                <a href="/Bibi_Mariyam_MERN_stack_developer.pdf" download>
                                     <div className="relative px-5 py-3 rounded-full text-white font-medium bg-[#a58fdf] group" >
                                         <span className="absolute inset-0 rounded-full bg-black/90 group-hover:bg-transparent transition duration-300 flex items-center justify-center m-0.5">
-                                            <AiFillThunderbolt className='mr-2' />  Get in touch
+                                            <AiFillThunderbolt className='mr-2' />  Download Resume
                                         </span>
-                                        <span className="relative flex items-center justify-center"><AiFillThunderbolt className='mr-2' /> Get in touch</span>
+                                        <span className="relative flex items-center justify-center"><AiFillThunderbolt className='mr-2' /> Download Resume</span>
                                     </div>
                                 </a>
                             </div>

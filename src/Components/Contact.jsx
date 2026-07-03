@@ -82,7 +82,7 @@ const Contact = () => {
             <div className="h-4 border-x border-b border-(--border-soft) "></div>
             <div className="border-x border-(--border-soft) bg-[url('./assets/download.svg')] bg-cover bg-center bg-no-repeat py-20">
                 <Toaster position="top-right" />
-                <div className="max-w-2xl mx-auto flex flex-col gap-8 px-4 md:px-0">
+                <div className="max-w-3xl mx-auto flex flex-col gap-8 px-4 md:px-0">
 
                     {/* Heading */}
                     <div className="flex flex-col gap-3 text-center contact-heading">

@@ -64,7 +64,7 @@ const Experience = () => {
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-b border-(--border-soft)">
-                <div className="max-w-2xl mx-auto px-4 md:px-0 py-10">
+                <div className="max-w-3xl mx-auto px-4 md:px-0 py-10">
                     <p className="exp-heading text-sm tracking-[2px] uppercase font-medium">
                         Experience
                     </p>
@@ -72,11 +72,11 @@ const Experience = () => {
             </div>
 
             <div className="border-x border-(--border-soft)">
-                <div className="max-w-2xl mx-auto px-4 md:px-0 md:py-10">
+                <div className="max-w-3xl mx-auto px-4 md:px-0 md:py-10">
                     {experienceData.map((exp, index) => (
-                        <div 
-                        key={index} 
-                        className="exp-card flex flex-col gap-5 pt-8 md:pt-10 pb-8 md:pb-10 border-b border-dashed border-(--border-soft) last:border-b-0">
+                        <div
+                            key={index}
+                            className="exp-card flex flex-col gap-5 pt-8 md:pt-10 pb-8 md:pb-10 border-b border-dashed border-(--border-soft) last:border-b-0">
                             <PiCodeBold className="exp-icon text-3xl " />
                             <div className="flex flex-wrap gap-5 justify-between items-center">
                                 <p className="text-lg font-medium">{exp.title}, {exp.company}</p>

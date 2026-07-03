@@ -38,7 +38,7 @@ const Extra = () => {
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-b border-(--border-soft)">
-                <div className="max-w-2xl mx-auto flex flex-col md:flex-row items-start gap-5 md:gap-10 lg:gap-28 px-4 md:px-0 py-10">
+                <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-start gap-5 md:gap-10 lg:gap-28 px-4 md:px-0 py-10">
                     <p className="extra-heading text-sm tracking-[2px] uppercase font-medium">
                         Github Repositories
                     </p>

@@ -137,16 +137,15 @@ const Featured = () => {
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-(--border-soft)">
-                <div className="max-w-2xl flex flex-col gap-12 mx-auto px-4 md:px-0 py-10">
+                <div className="max-w-3xl flex flex-col gap-12 mx-auto px-4 md:px-0 py-10">
                     <div className="featured-heading flex flex-col md:flex-row gap-5 items-center justify-between">
                         <p className="text-sm tracking-[2px] uppercase font-medium">
                             Featured work
                         </p>
-                        <a 
-                        href="/Bibi_Mariyam_MERN_stack_developer.pdf" 
-                        download
-                        className="rounded-md text-sm font-medium transition-all border border-(--border-soft) shadow-xs hover:bg-(--hover-soft) py-3 px-5">
-                            Download Resume
+                        <a
+                            href="mailto:bibimariyamnavila@gmail.com"
+                            className="rounded-md text-sm font-medium transition-all border border-(--border-soft) shadow-xs hover:bg-(--hover-soft) py-3 px-5">
+                            Get in touch
                         </a>
                     </div>
                 </div>
