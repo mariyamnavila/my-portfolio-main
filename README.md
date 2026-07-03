@@ -1,68 +1,89 @@
-Personal Portfolio 
-Task Requirements:
+# Bibi Mariyam — Personal Portfolio
 
-1. Navigation Bar (Navbar)
--A fully responsive navigation bar.
--Easy access to all sections of the portfolio from the navbar.
+A modern, responsive portfolio website showcasing my work as a Full-stack Developer based in Chattogram, Bangladesh.
 
-2. Designation and Introduction
--Display your professional designation (e.g., Frontend Developer, Web Developer, Full Stack Developer, etc.).
--Include a professional photo of yourself.
+**Live Link:** [bibi-mariyam.vercel.app](https://bibi-mariyam.vercel.app)
 
-3. Resume Download Button
--A clearly visible button in the hero section that allows visitors to view and download your resume with a single click. (**Resume will be downloaded if your resume is ready. If it is not ready, for now you can just keep the clickable button.**)
+---
 
-4. Social Links
--Embed buttons linking to your relevant social media profiles (e.g., GitHub, LinkedIn, Twitter, Facebook).
+## About
 
-5. About Me Section
--Write a detailed introduction about yourself, including:
--Your programming journey.
--The type of work you enjoy.
--Any hobbies or interests outside of programming (e.g., sports, painting).
--Showcase your personality in this section.
+This portfolio is built with React and styled with Tailwind CSS, featuring smooth GSAP animations, a clean UI, and full responsiveness across all devices. It highlights my skills, projects, and journey as a developer.
 
-6. Skills Section
--Display your skills in a visually appealing graphical format.
--Categorize skills if necessary (e.g., Frontend, Backend, Tools).
+---
 
+## Features
 
-7. Educational Qualification
--Mention your educational background in detail if you have completed education above HSC.
+- **Responsive Navbar** — Fixed navigation with smooth scrolling, active section indicator, and mobile menu
+- **Hero Section** — Profile image, designation, location, social links, and resume download
+- **About Me** — Programming journey, interests, work philosophy, and services
+- **Skills** — Categorized tech stack display (Frontend, Backend, Tools, Deployment)
+- **Featured Projects** — Project cards with details modal, live links, and GitHub repos
+- **Contact** — Email, phone, WhatsApp, and a functional contact form (EmailJS)
+- **Footer** — Clean and minimal
 
-8. Experience (If Applicable)
--Add relevant professional experience, if available.
+---
 
-9. Projects Section (At Least 3 Projects)
--Showcase at least three of your best projects in card format.
--Each project card must contain:
--Project name
--Project image
--"View More / Details" button
--Clicking the "View More / Details" button should lead to a detailed project page containing:
--Main technology stack used
--Brief description
--Live project link
--GitHub repository link (only client)
--Challenges faced while developing the project
--Potential improvements and future plans for the project
+## Tech Stack
 
-10. Contact Information
--Provide an easy way for visitors to contact you directly.
--Include:
--Email address
--Phone number
--WhatsApp number (optional)
+| Category | Technologies |
+|----------|-------------|
+| Frontend | React, Tailwind CSS, GSAP |
+| Backend | Node.js, Express.js, MongoDB |
+| Tools | Git, Firebase, Figma, VS Code |
+| Deployment | Vercel, Netlify |
+| Other | EmailJS, React Icons, Sonner |
 
-11. Footer (Optional)
--A simple and elegant footer can be added for better presentation.
+---
 
-12. Responsive and Clean UI for All Devices
--Ensure full responsiveness across all screen sizes (desktop, laptop, tablet, mobile).
--Choose a polished and professional color scheme.
+## Projects Showcased
 
-**You can use any technology to build the proper portfolio.But all the requirements must be completed.** 
+| Project | Description | Live |
+|---------|-------------|------|
+| **Life Drop** | Blood donation platform with role-based dashboards and Stripe integration | [Live](https://life-drop-17699.web.app/) |
+| **Recipe Book** | Recipe management app with wishlists and like/dislike system | [Live](https://recipe-book-77bc3.web.app/) |
+| **Royal Ville** | Hotel booking app with filtering, reviews, and booking management | [Live](https://royal-ville.web.app/) |
+| **JobTrack** | Job application tracker with smooth GSAP animations | [Live](https://jobtrack-b425e.web.app/) |
 
-Submission Requirements:
--The website must be hosted and a live link should be provided. Please ensure that the live link is working. Otherwise, you will be given 0.
--Ensure a clean and structured design following the above-mentioned points.
+---
+
+## Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/mariyamnavila/bibi-mariyam-portfolio.git
+
+# Navigate to project directory
+cd bibi-mariyam-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+---
+
+## Contact
+
+- **Email:** bibimariyamnavila@gmail.com
+- **Phone:** +880 1824574234
+- **WhatsApp:** [Chat on WhatsApp](https://wa.me/8801824574234)
+- **GitHub:** [mariyamnavila](https://github.com/mariyamnavila)
+- **LinkedIn:** [bibimariyam](https://www.linkedin.com/in/bibimariyam/)
+
+---
+
+2026 © Made by Bibi Mariyam — All rights reserved
