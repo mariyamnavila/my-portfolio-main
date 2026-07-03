@@ -133,7 +133,7 @@ const Featured = () => {
 
 
     return (
-        <section ref={container} className="max-w-(--content-width) mx-auto">
+        <section id="projects" ref={container} className="max-w-(--content-width) mx-auto">
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-(--border-soft)">

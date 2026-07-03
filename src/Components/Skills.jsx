@@ -44,7 +44,7 @@ const Skills = () => {
     }, { scope: container });
 
     return (
-        <section ref={container} className="max-w-(--content-width) mx-auto">
+        <section id="skills" ref={container} className="max-w-(--content-width) mx-auto">
             <div className="h-4 border border-(--border-soft)"></div>
 
             <div className="border-x border-(--border-soft) py-17">

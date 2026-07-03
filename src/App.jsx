@@ -5,11 +5,13 @@ import Extra from "./Components/Extra";
 import Featured from "./Components/Featured";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Hero></Hero>
       <About></About>
       <Skills></Skills>

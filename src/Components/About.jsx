@@ -49,7 +49,7 @@ const About = () => {
 
 
     return (
-        <section ref={container} className="max-w-(--content-width) mx-auto ">
+        <section id="about" ref={container} className="max-w-(--content-width) mx-auto ">
             <div className="h-4 border border-(--border-soft)"></div>
             <div className="bg-[url('./assets/download.svg')] bg-cover bg-center bg-no-repeat border-x border-(--border-soft) py-17">
                 <div className="max-w-2xl flex flex-col gap-9 sm:gap-12 mx-auto px-4 md:px-0">

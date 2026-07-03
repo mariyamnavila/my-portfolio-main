@@ -78,7 +78,7 @@ const Contact = () => {
     }, { scope: container });
 
     return (
-        <section ref={container} className="max-w-(--content-width) mx-auto ">
+        <section id="contact" ref={container} className="max-w-(--content-width) mx-auto ">
             <div className="h-4 border-x border-b border-(--border-soft) "></div>
             <div className="border-x border-(--border-soft) bg-[url('./assets/download.svg')] bg-cover bg-center bg-no-repeat py-20">
                 <Toaster position="top-right" />
